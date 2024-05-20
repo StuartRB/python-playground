@@ -1,6 +1,9 @@
+from utils.print_utils import slow_print
+
+
 def start():
     print()
-    print("Welcome to...")
+    slow_print("Welcome to...")
     print("")
     print("     ****************")
     print("     ** HALE QUEST **")
