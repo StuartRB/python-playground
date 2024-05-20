@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
 
+from service.web_service import call_client
+
 app = Flask(__name__)
 
 
@@ -15,6 +17,7 @@ def peas():
 
 @app.route("/sandwich/<filling>")
 def sandwich(filling):
+    call_client(filling)
     return f'I also enjoy {filling} sandwiches'
 
 @app.route('/post', methods=['POST'])
